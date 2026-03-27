@@ -166,6 +166,15 @@
       font-size: 13px;
     }
 
+    .notice {
+      margin: 18px auto 0;
+      max-width: 760px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
     @media (max-width: 1100px) {
       .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
@@ -187,17 +196,17 @@
     <section class="hero">
       <h1>720理性检测工具下载</h1>
       <p>
-        点击第一个方块即可下载工具包，其余方块用于展示功能介绍、版本说明和使用提示。
+        点击第一个方块即可下载工具压缩包。你这次上传的是 <strong>.7z</strong> 文件，所以下载链接已经对应修正。
       </p>
     </section>
 
     <section class="grid">
-      <a class="box download" href="720理性检测工具.zip" download>
+      <a class="box download" href="720_rational_security.7z" download="720_rational_security.7z">
         <div class="box-inner">
           <div class="tag">下载入口</div>
           <div>
             <h2 class="title">720理性检测工具下载</h2>
-            <p class="desc">点击这里下载最新版工具压缩包，文件请与本页面放在同一目录下。</p>
+            <p class="desc">点击这里下载最新版工具压缩包，当前格式为 7z。</p>
           </div>
           <div class="download-btn">立即下载</div>
         </div>
@@ -273,6 +282,10 @@
         </div>
       </div>
     </section>
+
+    <div class="notice">
+      如果你以后把压缩包改成 ZIP，只需要把第一个方块的文件名从 <code>.7z</code> 改成 <code>.zip</code> 即可。
+    </div>
 
     <div class="footer">
       720理性检测 · 静态下载页
