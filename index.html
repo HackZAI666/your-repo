@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>720理性检测工具下载</title>
+  <style>
+    :root {
+      --bg1: #0f1221;
+      --bg2: #151a33;
+      --card: rgba(255, 255, 255, 0.08);
+      --card2: rgba(255, 255, 255, 0.12);
+      --text: #f4f7ff;
+      --muted: rgba(244, 247, 255, 0.72);
+      --accent: #6ea8ff;
+      --accent2: #7cf7d4;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(110, 168, 255, 0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(124, 247, 212, 0.16), transparent 24%),
+        linear-gradient(160deg, var(--bg1), var(--bg2));
+    }
+
+    body {
+      padding: 40px 18px 60px;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 54px);
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      margin: 12px auto 0;
+      max-width: 760px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .box {
+      position: relative;
+      display: block;
+      aspect-ratio: 1 / 1;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: var(--text);
+      overflow: hidden;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.14), transparent 45%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-6px);
+      background: linear-gradient(180deg, var(--card2), rgba(255,255,255,0.06));
+      border-color: rgba(255, 255, 255, 0.26);
+    }
+
+    .box:hover::before {
+      opacity: 1;
+    }
+
+    .box-inner {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .desc {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .download {
+      background: linear-gradient(180deg, rgba(110,168,255,0.24), rgba(124,247,212,0.14));
+      border-color: rgba(110,168,255,0.36);
+    }
+
+    .download .tag {
+      background: rgba(110, 168, 255, 0.22);
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #08101c;
+      font-weight: 800;
+      border: none;
+      box-shadow: 0 12px 26px rgba(110, 168, 255, 0.22);
+    }
+
+    .footer {
+      margin-top: 26px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 1100px) {
+      .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 760px) {
+      body { padding: 24px 14px 40px; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+      .box-inner { padding: 18px; }
+      .title { font-size: 18px; }
+    }
+
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>720理性检测工具下载</h1>
+      <p>
+        点击第一个方块即可下载工具包，其余方块用于展示功能介绍、版本说明和使用提示。
+      </p>
+    </section>
+
+    <section class="grid">
+      <a class="box download" href="720理性检测工具.zip" download>
+        <div class="box-inner">
+          <div class="tag">下载入口</div>
+          <div>
+            <h2 class="title">720理性检测工具下载</h2>
+            <p class="desc">点击这里下载最新版工具压缩包，文件请与本页面放在同一目录下。</p>
+          </div>
+          <div class="download-btn">立即下载</div>
+        </div>
+      </a>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="tag">功能介绍</div>
+          <div>
+            <h2 class="title">文件扫描</h2>
+            <p class="desc">支持基础哈希检测、字符串规则扫描和风险评分展示。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="tag">安全功能</div>
+          <div>
+            <h2 class="title">隔离文件</h2>
+            <p class="desc">检测后可将可疑文件移动到隔离区，避免直接执行。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="tag">规则库</div>
+          <div>
+            <h2 class="title">黑名单更新</h2>
+            <p class="desc">支持将高风险文件的 SHA256 自动加入黑名单。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="tag">版本说明</div>
+          <div>
+            <h2 class="title">V1.0</h2>
+            <p class="desc">这是一个带可视化界面的基础安全分析版本。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="tag">运行环境</div>
+          <div>
+            <h2 class="title">Windows</h2>
+            <p class="desc">适合直接运行打包后的 exe 文件，无需额外安装界面。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="tag">提示</div>
+          <div>
+            <h2 class="title">先测试再使用</h2>
+            <p class="desc">建议先用普通文件测试功能，再检测不明文件。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="tag">后续扩展</div>
+          <div>
+            <h2 class="title">继续升级</h2>
+            <p class="desc">以后可以继续加界面美化、日志页面和更多检测规则。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      720理性检测 · 静态下载页
+    </div>
+  </div>
+</body>
+</html>
